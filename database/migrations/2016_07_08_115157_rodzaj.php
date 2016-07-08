@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Kategoria extends Migration
+class Rodzaj extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,9 @@ class Kategoria extends Migration
      */
     public function up()
     {
-        Schema::create('kategoria', function (Blueprint $table) {
+        Schema::create('rodzaj', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('kategoria,10');
+            $table->string('rodzaj,10');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ class Kategoria extends Migration
      */
     public function down()
     {
-        Schema::drop('kategoria');
+        Schema::drop('rodzaj');
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Kategoria extends Migration
+class Stanzmianowy extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,11 @@ class Kategoria extends Migration
      */
     public function up()
     {
-        Schema::create('kategoria', function (Blueprint $table) {
+        Schema::create('stanzmianowy', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('kategoria,10');
+            $table->integer('wsp_id')->nullable()->default(null);
+            $table->string('stan,10');
+            $table->dateTime('data_godzina');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class Kategoria extends Migration
      */
     public function down()
     {
-        Schema::drop('kategoria');
+        Schema::drop('stanzmianowy');
     }
 }
