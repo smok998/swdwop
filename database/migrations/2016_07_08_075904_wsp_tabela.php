@@ -14,15 +14,15 @@ class WspTabela extends Migration
     {
         Schema::create('wsp', function (Blueprint $table) {
             $table->increments('id');
-            $table->Integer('dwop_id');
-            $table->Integer('kategoria_id');
-            $table->Integer('przeznaczenie_id');
-            $table->Integer('rodzaj_id');
-            $table->Integer('pojazdy_id');
-            $table->Integer('sprzet_id');
-            $table->Integer('zdarzenia_id');
-            $table->Integer('strazacy_id');
-            $table->Integer('stanzmianowy_id');
+            $table->Integer('dwop_id')->nullable()->default(null);
+            $table->Integer('kategoria_id')->nullable()->default(null);
+            $table->Integer('przeznaczenie_id')->nullable()->default(null);
+            $table->Integer('rodzaj_id')->nullable()->default(null);
+            $table->Integer('pojazdy_id')->nullable()->default(null);
+            $table->Integer('sprzet_id')->nullable()->default(null);
+            $table->Integer('zdarzenia_id')->nullable()->default(null);
+            $table->Integer('strazacy_id')->nullable()->default(null);
+            $table->Integer('stanzmianowy_id')->nullable()->default(null);
             $table->char('jednostka,255');
             $table->enum('typ', ['DWOP','SSP','ZRG']);
             $table->enum('ksrg', ['TAK','NIE']);
