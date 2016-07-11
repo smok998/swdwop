@@ -13,4 +13,5 @@
 
 Route::get('/', function () {
     return view('welcome');
+    echo \App\Strazacy::all();
 });
