@@ -38,7 +38,14 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Laravel 5<br>
+                    {{
+                    $dzis = date('d-m-Y');
+                    echo $dzis;
+                    }}
+
+
+                </div>
             </div>
         </div>
     </body>

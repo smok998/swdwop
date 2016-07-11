@@ -26,7 +26,7 @@ class Strazacy extends Migration
             $table->string('nazwisko,30');
             $table->enum('zmiana', ['ZMIANA I','ZMIANA II','ZMIANA III','ZMIANA IV','DZIENNY']);
             $table->enum('rodzaj', ['pracownik','strażak','żołnierz']);
-            $table->Date('kurs_podstawowy');
+            $table->date('kurs_podstawowy');
             $table->date('kurs_uzupelniajacy');
             $table->date('kurs_jednoetapowy');
             $table->date('kurs_kpp');

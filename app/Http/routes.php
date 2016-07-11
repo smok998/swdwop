@@ -15,3 +15,10 @@ Route::get('/', function () {
     return view('welcome');
     echo \App\Strazacy::all();
 });
+
+Route::get('strazaki', function()
+{
+    return 'Czesc uzytkowniku!';
+});
+
+Route::get('strazaki2', 'StrazController@strazaki');
