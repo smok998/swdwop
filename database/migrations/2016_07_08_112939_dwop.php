@@ -16,11 +16,12 @@ class Dwop extends Migration
             $table->increments('id');
             $table->Integer('iwop_id')->nullable()->default(null);
             $table->Integer('wsp_id')->nullable()->default(null);
-            $table->char('nazwa,255');
-            $table->string('adres,255');
+            $table->string('nazwa');
+            $table->string('adres');
             $table->string('tel_fax,15');
             $table->string('tel_sekretariat,15');
             $table->string('tel_szef,15');
+            $table->string('tel_spec,15');
             $table->timestamps();
         });
     }

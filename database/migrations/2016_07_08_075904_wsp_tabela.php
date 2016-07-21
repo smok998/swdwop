@@ -23,11 +23,11 @@ class WspTabela extends Migration
             $table->Integer('zdarzenia_id')->nullable()->default(null);
             $table->Integer('strazacy_id')->nullable()->default(null);
             $table->Integer('stanzmianowy_id')->nullable()->default(null);
-            $table->char('jednostka,255');
+            $table->string('jednostka');
             $table->enum('typ', ['DWOP','SSP','ZRG']);
             $table->enum('ksrg', ['TAK','NIE']);
-            $table->char('nazwa_skrot,255');
-            $table->char('miejscowosc,255');
+            $table->string('nazwa_skrot');
+            $table->string('miejscowosc');
             $table->tinyInteger('etat_pracownicy');
             $table->tinyInteger('etat_strazacy');
             $table->tinyInteger('etat_zolnierze');

@@ -27,6 +27,6 @@ class Komentarze extends Migration
      */
     public function down()
     {
-        Schema::drop(''komentarze'');
+        Schema::drop('komentarze');
     }
 }

@@ -27,6 +27,6 @@ class Posty extends Migration
      */
     public function down()
     {
-        Schema::drop(''posty'');
+        Schema::drop('posty');
     }
 }
